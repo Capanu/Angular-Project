@@ -1,0 +1,62 @@
+<form class="modal-container" id="myModal" >
+    <div class="title-div">
+        <p class="title">Add/Edit article</p>
+    </div>
+
+    <div class="final-four">
+        <input
+            id="title"
+            name="title"
+            type="text"
+            class="normal-input"
+            placeholder="Please enter title"
+            value={{article.title}}
+           
+        >
+        <input
+        id="tag"
+            name="tag"
+            type="text"
+            class="normal-input"
+            placeholder="Please enter type"
+            value={{article.tag}}
+        >
+        <input
+        id="author"
+            name="author"
+            type="text"
+            class="normal-input"
+            placeholder="Please enter author"
+            value={{article.author}}
+        >
+        <input
+        id="date"
+            name="date"
+            type="text"
+            class="normal-input"
+            placeholder="Please enter date"
+            value={{article.date}}
+        >
+    </div>
+
+    <input
+    id="imgUrl"
+        name="imgUrl"
+        type="text"
+        class="url-input"
+        placeholder="Please enter url"
+        value={{article.imgUrl}}
+    >
+    <textarea
+    id="content"
+        name="content"
+        class="contnet-input"
+        placeholder="Please enter content"
+        value={{article.content}}
+    ></textarea>
+    <div class="final-four">
+        <button  (click)="getValues()" routerLink="/">Save</button>
+        <button   routerLink="/">Cancel</button>
+    </div>
+    <br />
+</form>

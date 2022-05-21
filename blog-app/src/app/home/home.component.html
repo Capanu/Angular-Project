@@ -1,0 +1,31 @@
+<div class="parent-container">
+    <main class="payload-container" id="my-contnent-to-hide">
+        <nav class="main-page-nav">
+            <a href="#" class="nav-item">
+                TRAVEL UPDATES
+            </a>
+            <a href="#" class="nav-item">
+                REVIEWS
+            </a>
+            <a href="#" class="nav-item">
+                ABOUT
+            </a>
+            <a href="#" class="nav-item">
+                CONTACT
+            </a>
+        </nav>
+
+        <button routerLink="/modal/-1"
+            class="add-article-button">
+            +Add new
+        </button>
+
+        <div id="page-article"  *ngFor="let article of listToDisplay">
+            <app-article [article]="article" (updateDataEvent)="refetch()"></app-article>
+        </div>
+    </main>
+    <div class="next-prev subtitle" id="nexter">
+        <span (click)="goPrev()">previous</span>
+        <span (click)="goNext()">next</span>
+    </div>
+</div>

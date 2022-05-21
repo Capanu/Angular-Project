@@ -1,0 +1,22 @@
+<article class="article-class">
+    <p class="title main-title">{{article.title}}</p>
+    <div class="above-story">
+        <span class="bullet-text">{{article.tag}}</span>
+        <span >&#8226;</span>
+        <span class="bullet-text">Added by</span>
+        <span class="author-text">{{article.author}}</span>
+        <span  >&#8226;</span>
+        <span class="bullet-text">{{article.date}}</span>
+    </div>
+
+    <div class="edit-above-story">
+        <button class="button-item" routerLink="/modal/{{article.id}}">Edit</button>
+        <span >|</span>
+        <button class="button-item" (click)="deleteArticle(article)">Delete</button>
+    </div>
+
+    <img  class="img-article"src={{article.imgUrl}} alt={{article.title}} />
+    <p class="payload-text">
+    {{article.content}}
+    </p>
+ </article>
